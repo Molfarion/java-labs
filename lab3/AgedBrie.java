@@ -4,7 +4,7 @@ public class AgedBrie extends Item {
     }
 
     @Override
-    public void updateQuality() {
+    public void updateParams() {
         increaseQualityByOne();
         if (sellIn < 11) {
             increaseQualityByOne(); 

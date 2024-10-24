@@ -12,23 +12,27 @@ public class Item {
         this.quality = quality;
     }
 
-    public void increaseQualityByOne() {
-        if(quality < 50) {
+    public int increaseQualityByOne() {
+        if (quality < 50) {
             quality++;
         }
-    }
-
-    public void decreaseQualityByOne() {
-        if(quality > 0) {
-            quality--;
-        }
-    }
-
-    public void decreaseSellInByOne() {
-        sellIn--;
+        return quality;
     }
     
-    public void updateQuality() {
+    public int decreaseQualityByOne() {
+        if (quality > 0) {
+            quality--;
+        }
+        return quality;
+    }
+    
+    public int decreaseSellInByOne() {
+        sellIn--;
+        return sellIn;
+    }
+    
+    
+    public void updateParams() {
         decreaseQualityByOne(); 
         decreaseSellInByOne();
         if (sellIn < 0) {

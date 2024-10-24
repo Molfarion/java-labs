@@ -5,9 +5,9 @@ public class GildedRose {
         this.items = items;
     }
 
-    public void updateQuality() {
+    public void updateParams() {
         for (Item item : items) {
-            item.updateQuality();
+            item.updateParams();
         }
     }
 }
