@@ -12,26 +12,27 @@ public class Item {
         this.quality = quality;
     }
 
-    public int increaseQualityByOne() {
+    public void increaseQualityByOne() {
         if(quality < 50) {
-            return quality++;
+            quality++;
         }
-        return quality;
     }
 
-    public int decreaseQualityByOne() {
+    public void decreaseQualityByOne() {
         if(quality > 0) {
-            return quality--;
+            quality--;
         }
-        return quality;
     }
 
-    public int decreaseSellInByOne() {
-        return sellIn--;
+    public void decreaseSellInByOne() {
+        sellIn--;
     }
     
-   @Override
-   public String toString() {
-        return this.name + ", " + this.sellIn + ", " + this.quality;
+    public void updateQuality() {
+        decreaseQualityByOne(); 
+        decreaseSellInByOne();
+        if (sellIn < 0) {
+            decreaseQualityByOne(); 
+        }
     }
 }
