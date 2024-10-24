@@ -6,42 +6,38 @@ public class GildedRose {
     }
 
     public void updateQuality() {
-        for (Item item:items) {
+        for (Item item : items) {
             if (item.name.equals("Aged Brie")) {
                 item.increaseQualityByOne();
-            }
-            
+                if (item.sellIn < 0) {
+                    item.increaseQualityByOne(); 
+                }
+                item.decreaseSellInByOne(); 
+            } 
+
             else if (item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
                 item.increaseQualityByOne();
-        
                 if (item.sellIn < 11) {
-                    item.increaseQualityByOne();
+                    item.increaseQualityByOne(); 
                 }
-        
                 if (item.sellIn < 6) {
-                    item.increaseQualityByOne();
+                    item.increaseQualityByOne(); 
                 }
+                if (item.sellIn < 0) {
+                    item.quality = 0; 
+                }
+                item.decreaseSellInByOne(); 
+            } 
+
+            else if (item.name.equals("Sulfuras, Hand of Ragnaros")) {
+              // nothing to do for Sulfuras?
             }
 
-            else if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
-                item.decreaseQualityByOne();
-            }
-
-            if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
+            else {
+                item.decreaseQualityByOne(); 
                 item.decreaseSellInByOne();
-            }
-
-            if (item.sellIn < 0) {
-                if (!item.name.equals("Aged Brie")) {
-                    if (!item.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
-                        if (!item.name.equals("Sulfuras, Hand of Ragnaros")) {
-                            item.decreaseQualityByOne();
-                        }
-                    } else {
-                        item.quality = 0;
-                    }
-                } else {
-                    item.increaseQualityByOne();
+                if (item.sellIn < 0) {
+                    item.decreaseQualityByOne(); 
                 }
             }
         }
