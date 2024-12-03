@@ -1,8 +1,8 @@
-package src.main.com.java;
+package src.main.com.java.tasks;
 
 public class DocumentationTask extends Task {
     public DocumentationTask(String name) {
-        super(name);
+        super(name, "documentation");
     }
 
     @Override

@@ -1,0 +1,11 @@
+{
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "lab4/src/lib/junit-platform-console-standalone-1.11.3.jar"
+        ],
+        "exclude": [
+            "lib/junit-4.13.2.jar"
+        ]
+    }
+}

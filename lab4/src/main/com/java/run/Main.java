@@ -1,4 +1,7 @@
-package src.main.com.java;
+package src.main.com.java.run;
+
+import src.main.com.java.projects.*;
+import src.main.com.java.tasks.*;
 
 public class Main {
     public static void main(String[] args) {

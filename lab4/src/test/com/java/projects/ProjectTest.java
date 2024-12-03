@@ -1,9 +1,10 @@
-package src.test.com.java;
+package src.test.com.java.projects;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
-import src.main.com.java.*;
+import src.main.com.java.projects.*;
+
 
 public class ProjectTest {
 
@@ -20,7 +21,7 @@ public class ProjectTest {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
             new SoftwareProject(null); 
         });
-        assertEquals("Project name cannot be null", exception.getMessage());
+        assertEquals("Project name cannot be null or empty", exception.getMessage());
     }
 
     @Test
