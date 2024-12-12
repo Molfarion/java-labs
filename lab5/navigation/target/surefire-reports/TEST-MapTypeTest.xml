@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="MapTypeTest" time="0.152" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="MapTypeTest" time="0.113" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="UA"/>
     <property name="sun.boot.library.path" value="C:\Users\Admin\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.4.7-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\Admin\AppData\Local\Temp\surefire7518098698346969325\surefirebooter4746587558927853791.jar C:\Users\Admin\AppData\Local\Temp\surefire7518098698346969325 2024-12-13T01-11-01_785-jvmRun1 surefire585598591470651001tmp surefire_09487679908788215739tmp"/>
+    <property name="sun.java.command" value="C:\Users\Admin\AppData\Local\Temp\surefire5565340126343548577\surefirebooter17845907917796417125.jar C:\Users\Admin\AppData\Local\Temp\surefire5565340126343548577 2024-12-13T01-23-18_494-jvmRun1 surefire9175246418057516146tmp surefire_012033222835235775371tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\target\test-classes;C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\target\classes;C:\Users\Admin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\Admin\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Admin\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\Admin\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Admin\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\Admin\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\Admin\.m2\repository\org\junit\platform\junit-platform-launcher\1.10.0\junit-platform-launcher-1.10.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Admin\AppData\Local\Temp\surefire7518098698346969325\surefirebooter4746587558927853791.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Admin\AppData\Local\Temp\surefire5565340126343548577\surefirebooter17845907917796417125.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.4+7-LTS"/>
@@ -59,8 +59,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testMapTypeConsistency" classname="MapTypeTest" time="0.07"/>
-  <testcase name="testMapDisplay" classname="MapTypeTest" time="0.003"/>
+  <testcase name="testMapTypeConsistency" classname="MapTypeTest" time="0.057"/>
+  <testcase name="testMapDisplay" classname="MapTypeTest" time="0.001"/>
   <testcase name="testZoomInAndOut" classname="MapTypeTest" time="0.011">
     <system-out><![CDATA[Zooming in on Satellite Map. Zoom level: 2
 Zooming in on Satellite Map. Zoom level: 3
