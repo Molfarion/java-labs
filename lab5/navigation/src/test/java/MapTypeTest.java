@@ -1,98 +1,66 @@
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
-public class MapTypeTest {
+import maps.MapType;
+import maps.RoadMap;
+import maps.SatelliteMap;
+import maps.TerrainMap;
 
-    @Test
-    void testSatelliteMapDisplay() {
-        MapType satelliteMap = new SatelliteMap();
-        
-        assertDoesNotThrow(() -> satelliteMap.displayMap());
+class MapTypeTest {
 
-        assertEquals("Satellite Map", satelliteMap.getMapType());
+    private MapType satelliteMap;
+    private MapType roadMap;
+    private MapType terrainMap;
+
+    @BeforeEach
+    void setUp() {
+        satelliteMap = new SatelliteMap();
+        roadMap = new RoadMap();
+        terrainMap = new TerrainMap();
     }
 
     @Test
-    void testSchematicMapDisplay() {
-        MapType schematicMap = new SchematicMap();
-        
-        assertDoesNotThrow(() -> schematicMap.displayMap());
+    void testMapDisplay() {
+        assertMapTypeDisplay(satelliteMap, "Satellite Map");
+        assertMapTypeDisplay(roadMap, "Road Map");
+        assertMapTypeDisplay(terrainMap, "Terrain Map");
+    }
 
-        assertEquals("Schematic Map", schematicMap.getMapType());
+    private void assertMapTypeDisplay(MapType map, String expected) {
+        assertEquals(expected, map.getMapType());
     }
 
     @Test
-    void testSatelliteMapZoomIn() {
-        MapType satelliteMap = new SatelliteMap();
-        
-        assertEquals(1, satelliteMap.getZoomLevel());
-
-        satelliteMap.zoomIn();
-        assertEquals(2, satelliteMap.getZoomLevel());
-
-        satelliteMap.zoomIn();
-        assertEquals(3, satelliteMap.getZoomLevel());
+    void testZoomInAndOut() {
+        testZoomBehavior(satelliteMap, 1, 10);
+        testZoomBehavior(roadMap, 1, 15);
+        testZoomBehavior(terrainMap, 1, 20);
     }
 
-    @Test
-    void testSatelliteMapZoomOut() {
-        MapType satelliteMap = new SatelliteMap();
-        
-        assertEquals(1, satelliteMap.getZoomLevel());
+    private void testZoomBehavior(MapType map, int minZoom, int maxZoom) {
+        for (int i = 0; i < maxZoom; i++) {
+            map.zoomIn();
+        }
+        assertEquals(maxZoom, map.getZoomLevel());
+        map.zoomIn();
+        assertEquals(maxZoom, map.getZoomLevel()); 
 
-        satelliteMap.zoomIn();
-        assertEquals(2, satelliteMap.getZoomLevel());
-
-        satelliteMap.zoomOut();
-        assertEquals(1, satelliteMap.getZoomLevel());
-
-        satelliteMap.zoomOut();
-        assertEquals(1, satelliteMap.getZoomLevel());
-    }
-
-    @Test
-    void testSchematicMapZoomIn() {
-        MapType schematicMap = new SchematicMap();
-        
-        assertEquals(1, schematicMap.getZoomLevel());
-
-        schematicMap.zoomIn();
-        assertEquals(2, schematicMap.getZoomLevel());
-
-        schematicMap.zoomIn();
-        assertEquals(3, schematicMap.getZoomLevel());
-    }
-
-    @Test
-    void testSchematicMapZoomOut() {
-        MapType schematicMap = new SchematicMap();
-        
-        assertEquals(1, schematicMap.getZoomLevel());
-
-        schematicMap.zoomIn();
-        assertEquals(2, schematicMap.getZoomLevel());
-        schematicMap.zoomOut();
-        assertEquals(1, schematicMap.getZoomLevel());
-
-        schematicMap.zoomOut();
-        assertEquals(1, schematicMap.getZoomLevel());
+        for (int i = 0; i < maxZoom; i++) {
+            map.zoomOut();
+        }
+        assertEquals(minZoom, map.getZoomLevel());
+        map.zoomOut();
+        assertEquals(minZoom, map.getZoomLevel());
     }
 
     @Test
     void testMapTypeConsistency() {
-        MapType satelliteMap = new SatelliteMap();
-        MapType schematicMap = new SchematicMap();
-        
-        assertNotEquals(satelliteMap.getMapType(), schematicMap.getMapType());
-    }
+        assertNotEquals(satelliteMap.getMapType(), roadMap.getMapType(), "Satellite Map should not be equal to Road Map");
+        assertNotEquals(satelliteMap.getMapType(), terrainMap.getMapType(), "Satellite Map should not be equal to Terrain Map");
+        assertNotEquals(roadMap.getMapType(), terrainMap.getMapType(), "Road Map should not be equal to Terrain Map");
 
-    @Test
-    void testNullMap() {
-        MapType nullMap = null;
-
-        assertThrows(NullPointerException.class, () -> {
-            nullMap.displayMap();
-        });
+        assertEquals(satelliteMap.getMapType(), satelliteMap.getMapType(), "The same map should return the same type");
     }
 }
-

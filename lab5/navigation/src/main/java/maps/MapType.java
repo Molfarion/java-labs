@@ -1,4 +1,4 @@
-package com.example.maps;
+package maps;
 
 public interface MapType {
     void displayMap();
