@@ -4,8 +4,8 @@ import maps.MapType;
 import strategies.RouteStrategy;
 
 public class BusNavigation extends NavigationSystem {
-    private RouteStrategy routeStrategy;
-    private double speed;
+    private final RouteStrategy routeStrategy;
+    private final double speed;
 
     public BusNavigation(MapType mapType, RouteStrategy routeStrategy, double speed) {
         super(mapType);
