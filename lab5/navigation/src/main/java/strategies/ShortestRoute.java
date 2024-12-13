@@ -30,4 +30,3 @@ public class ShortestRoute implements RouteStrategy {
         return String.format("Shortest Route: %.2f km, Estimated Time: %.2f hours", calculateDistance(), estimateTime());
     }
 }
-
