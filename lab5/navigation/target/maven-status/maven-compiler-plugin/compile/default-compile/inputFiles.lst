@@ -1,12 +1,12 @@
-C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\Main.java
 C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\maps\MapType.java
 C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\maps\RoadMap.java
 C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\maps\SatelliteMap.java
 C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\maps\TerrainMap.java
+C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\run\Main.java
 C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\strategies\EconomicalRoute.java
 C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\strategies\FastestRoute.java
 C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\strategies\RouteStrategy.java
 C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\strategies\ShortestRoute.java
-C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\systems\BikeNavigation.java
+C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\systems\BusNavigation.java
 C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\systems\CarNavigation.java
 C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\systems\NavigationSystem.java

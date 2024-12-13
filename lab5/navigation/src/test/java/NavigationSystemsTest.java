@@ -1,74 +1,67 @@
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.*;
 
 import maps.MapType;
-import systems.BikeNavigation;
+import systems.BusNavigation;
 import systems.CarNavigation;
 import strategies.RouteStrategy;
+
 class NavigationSystemTest {
-
-    private MapType mockMapType;
-    private RouteStrategy mockRouteStrategy;
-    private CarNavigation carNavigation;
-    private BikeNavigation bikeNavigation;
-
-    @BeforeEach
-    void setUp() {
-        mockMapType = mock(MapType.class);
-        mockRouteStrategy = mock(RouteStrategy.class);
-
-        carNavigation = new CarNavigation(mockMapType, mockRouteStrategy);
-        bikeNavigation = new BikeNavigation(mockMapType, mockRouteStrategy);
-    }
 
     @Test
     void testCarNavigation() {
+        MapType mockMapType = mock(MapType.class);
+        RouteStrategy mockRouteStrategy = mock(RouteStrategy.class);
+        double speed = 80.0;
         String startPoint = "Point A";
         String endPoint = "Point B";
+
+        CarNavigation carNavigation = new CarNavigation(mockMapType, mockRouteStrategy, speed); 
+
+        when(mockRouteStrategy.calculateRoute(startPoint, endPoint, speed))
+            .thenReturn("Calculating the fastest route from Point A to Point B. Estimated time: 1.25 hours.");
 
         carNavigation.navigate(startPoint, endPoint);
 
         verify(mockMapType, times(1)).displayMap();
-        verify(mockRouteStrategy, times(1)).calculateRoute(startPoint, endPoint);
-    }
-
-    @Test
-    void testBikeNavigation() {
-        String startPoint = "Location X";
-        String endPoint = "Location Y";
-
-        bikeNavigation.navigate(startPoint, endPoint);
-
-        verify(mockMapType, times(1)).displayMap();
-        verify(mockRouteStrategy, times(1)).calculateRoute(startPoint, endPoint);
+        verify(mockRouteStrategy, times(1)).calculateRoute(startPoint, endPoint, speed); 
     }
 
     @Test
     void testCarNavigationWithDifferentRoutes() {
+        MapType mockMapType = mock(MapType.class);
         RouteStrategy fastestRoute = mock(RouteStrategy.class);
-        carNavigation = new CarNavigation(mockMapType, fastestRoute);
-
+        double speed = 80.0;
         String startPoint = "Start";
         String endPoint = "End";
+
+        CarNavigation carNavigation = new CarNavigation(mockMapType, fastestRoute, speed);
+
+        when(fastestRoute.calculateRoute(startPoint, endPoint, speed))
+            .thenReturn("Calculating the fastest route from Start to End. Estimated time: 1.50 hours.");
 
         carNavigation.navigate(startPoint, endPoint);
 
         verify(mockMapType, times(1)).displayMap();
-        verify(fastestRoute, times(1)).calculateRoute(startPoint, endPoint);
+        verify(fastestRoute, times(1)).calculateRoute(startPoint, endPoint, speed); 
     }
 
     @Test
-    void testBikeNavigationWithDifferentMap() {
-        MapType satelliteMap = mock(MapType.class);
-        bikeNavigation = new BikeNavigation(satelliteMap, mockRouteStrategy);
+    void testBusNavigation() {
+        MapType mockMapType = mock(MapType.class);
+        RouteStrategy fastestRoute = mock(RouteStrategy.class);
+        double speed = 60.0;
+        String startPoint = "Station A";
+        String endPoint = "Station B";
 
-        String startPoint = "Origin";
-        String endPoint = "Destination";
+        BusNavigation busNavigation = new BusNavigation(mockMapType, fastestRoute, speed);
 
-        bikeNavigation.navigate(startPoint, endPoint);
+        when(fastestRoute.calculateRoute(startPoint, endPoint, speed))
+            .thenReturn("Calculating the fastest route from Station A to Station B. Estimated time: 2.00 hours.");
 
-        verify(satelliteMap, times(1)).displayMap();
-        verify(mockRouteStrategy, times(1)).calculateRoute(startPoint, endPoint);
+        busNavigation.navigate(startPoint, endPoint);
+
+        verify(mockMapType, times(1)).displayMap();
+        verify(fastestRoute, times(1)).calculateRoute(startPoint, endPoint, speed); 
     }
 }

@@ -1,19 +1,21 @@
 package systems;
+
 import maps.MapType;
 import strategies.RouteStrategy;
-public class CarNavigation extends NavigationSystem {
-    private final RouteStrategy routeStrategy;
-    private final double speed; 
 
-    public CarNavigation(MapType mapType, RouteStrategy routeStrategy, double speed) {
+public class BusNavigation extends NavigationSystem {
+    private RouteStrategy routeStrategy;
+    private double speed;
+
+    public BusNavigation(MapType mapType, RouteStrategy routeStrategy, double speed) {
         super(mapType);
         this.routeStrategy = routeStrategy;
-        this.speed = speed;
+        this.speed = speed; 
     }
 
     @Override
     public void navigate(String startPoint, String endPoint) {
-        System.out.println("Car Navigation:");
+        System.out.println("Bus Navigation:"); 
         mapType.displayMap();
         String routeInfo = routeStrategy.calculateRoute(startPoint, endPoint, speed);
         System.out.println(routeInfo);

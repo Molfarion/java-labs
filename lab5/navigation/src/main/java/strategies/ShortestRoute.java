@@ -10,9 +10,11 @@ public class ShortestRoute implements RouteStrategy {
     }
 
     @Override
-    public String calculateRoute(String startPoint, String endPoint) {
+    public String calculateRoute(String startPoint, String endPoint, double speed) {
         this.distance = Math.random() * 150 + 20; 
-        return "Calculating the shortest route from " + startPoint + " to " + endPoint;
+        double time = this.distance / speed; 
+        return "Calculating the shortest route from " + startPoint + " to " + endPoint + 
+               ". Estimated time: " + String.format("%.2f", time) + " hours.";
     }
 
     @Override

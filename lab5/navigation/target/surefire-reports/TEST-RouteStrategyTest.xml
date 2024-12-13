@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="RouteStrategyTest" time="0.061" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="RouteStrategyTest" time="0.072" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="UA"/>
     <property name="sun.boot.library.path" value="C:\Users\Admin\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.4.7-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\Admin\AppData\Local\Temp\surefire17323145996544413068\surefirebooter17722684669087756022.jar C:\Users\Admin\AppData\Local\Temp\surefire17323145996544413068 2024-12-13T10-12-05_561-jvmRun1 surefire11314278347593183919tmp surefire_015750095952952062941tmp"/>
+    <property name="sun.java.command" value="C:\Users\Admin\AppData\Local\Temp\surefire6286537623306951650\surefirebooter13195304740896609406.jar C:\Users\Admin\AppData\Local\Temp\surefire6286537623306951650 2024-12-13T11-22-19_557-jvmRun1 surefire7852014470963167002tmp surefire_04386696947120110611tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\target\test-classes;C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\target\classes;C:\Users\Admin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\Admin\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Admin\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\Admin\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Admin\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\Admin\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\Admin\.m2\repository\org\junit\platform\junit-platform-launcher\1.10.0\junit-platform-launcher-1.10.0.jar;C:\Users\Admin\.m2\repository\org\mockito\mockito-core\5.5.0\mockito-core-5.5.0.jar;C:\Users\Admin\.m2\repository\net\bytebuddy\byte-buddy\1.14.6\byte-buddy-1.14.6.jar;C:\Users\Admin\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.6\byte-buddy-agent-1.14.6.jar;C:\Users\Admin\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Admin\AppData\Local\Temp\surefire17323145996544413068\surefirebooter17722684669087756022.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Admin\AppData\Local\Temp\surefire6286537623306951650\surefirebooter13195304740896609406.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.4+7-LTS"/>
@@ -59,16 +59,16 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testShortestRoute" classname="RouteStrategyTest" time="0.036">
-    <system-out><![CDATA[Shortest Route: 47,68 km, Estimated Time: 0,95 hours
+  <testcase name="testShortestRoute" classname="RouteStrategyTest" time="0.06">
+    <system-out><![CDATA[Shortest Route: 27,88 km, Estimated Time: 0,56 hours
 ]]></system-out>
   </testcase>
-  <testcase name="testEconomicalRoute" classname="RouteStrategyTest" time="0.003">
-    <system-out><![CDATA[Economical Route: 43,22 km, Estimated Time: 0,72 hours, Fuel Cost: 3,24
+  <testcase name="testEconomicalRoute" classname="RouteStrategyTest" time="0.005">
+    <system-out><![CDATA[Economical Route: 75,29 km, Estimated Time: 1,25 hours, Fuel Cost: 5,65
 ]]></system-out>
   </testcase>
-  <testcase name="testFastestRoute" classname="RouteStrategyTest" time="0.011">
-    <system-out><![CDATA[Fastest Route: 195,31 km, Estimated Time: 2,44 hours
+  <testcase name="testFastestRoute" classname="RouteStrategyTest" time="0.002">
+    <system-out><![CDATA[Fastest Route: 80,25 km, Estimated Time: 1,00 hours
 ]]></system-out>
   </testcase>
 </testsuite>

@@ -21,7 +21,7 @@ class RouteStrategyTest {
 
     @Test
     void testFastestRoute() {
-        String result = fastestRoute.calculateRoute("A", "B");
+        String result = fastestRoute.calculateRoute("A", "B", 120);
         assertTrue(result.contains("Calculating the fastest route"));
         assertTrue(fastestRoute.estimateTime() > 0);
         assertTrue(fastestRoute.calculateDistance() > 0);
@@ -30,7 +30,7 @@ class RouteStrategyTest {
 
     @Test
     void testShortestRoute() {
-        String result = shortestRoute.calculateRoute("X", "Y");
+        String result = shortestRoute.calculateRoute("X", "Y", 90);
         assertTrue(result.contains("Calculating the shortest route"));
         assertTrue(shortestRoute.estimateTime() > 0);
         assertTrue(shortestRoute.calculateDistance() > 0);
@@ -39,7 +39,7 @@ class RouteStrategyTest {
 
     @Test
     void testEconomicalRoute() {
-        String result = economicalRoute.calculateRoute("Start", "End");
+        String result = economicalRoute.calculateRoute("Start", "End", 50.0);
         assertTrue(result.contains("Calculating the most economical route"));
         assertTrue(economicalRoute.estimateTime() > 0);
         assertTrue(economicalRoute.calculateDistance() > 0);

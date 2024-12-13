@@ -12,9 +12,11 @@ public class EconomicalRoute implements RouteStrategy {
     }
 
     @Override
-    public String calculateRoute(String startPoint, String endPoint) {
+    public String calculateRoute(String startPoint, String endPoint, double speed) {
         this.distance = Math.random() * 100 + 30; 
-        return "Calculating the most economical route from " + startPoint + " to " + endPoint;
+        double time = this.distance / speed; 
+        return "Calculating the most economical route from " + startPoint + " to " + endPoint + 
+               ". Estimated time: " + String.format("%.2f", time) + " hours.";
     }
 
     @Override
