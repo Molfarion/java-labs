@@ -3,3 +3,8 @@ C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\map
 C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\maps\RoadMap.java
 C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\maps\SatelliteMap.java
 C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\maps\TerrainMap.java
+C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\strategies\EconomicalRoute.java
+C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\strategies\FastestRoute.java
+C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\strategies\RouteStrategy.java
+C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\strategies\ShortestRoute.java
+C:\Users\Admin\Documents\Programming\Java\labs\lab5\navigation\src\main\java\systems\NavigationSystem.java
