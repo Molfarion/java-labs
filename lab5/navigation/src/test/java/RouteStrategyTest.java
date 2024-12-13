@@ -1,8 +1,11 @@
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import strategies.EconomicalRoute;
+import strategies.FastestRoute;
+import strategies.RouteStrategy;
+import strategies.ShortestRoute;
 class RouteStrategyTest {
 
     private RouteStrategy fastestRoute;
