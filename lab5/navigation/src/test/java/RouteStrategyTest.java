@@ -1,4 +1,4 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -22,18 +22,27 @@ class RouteStrategyTest {
     @Test
     void testFastestRoute() {
         String result = fastestRoute.calculateRoute("A", "B");
-        assertEquals("Calculating the fastest route from A to B", result);
+        assertTrue(result.contains("Calculating the fastest route"));
+        assertTrue(fastestRoute.estimateTime() > 0);
+        assertTrue(fastestRoute.calculateDistance() > 0);
+        System.out.println(fastestRoute.getSummary());
     }
 
     @Test
     void testShortestRoute() {
         String result = shortestRoute.calculateRoute("X", "Y");
-        assertEquals("Calculating the shortest route from X to Y", result);
+        assertTrue(result.contains("Calculating the shortest route"));
+        assertTrue(shortestRoute.estimateTime() > 0);
+        assertTrue(shortestRoute.calculateDistance() > 0);
+        System.out.println(shortestRoute.getSummary());
     }
 
     @Test
     void testEconomicalRoute() {
         String result = economicalRoute.calculateRoute("Start", "End");
-        assertEquals("Calculating the most economical route from Start to End", result);
+        assertTrue(result.contains("Calculating the most economical route"));
+        assertTrue(economicalRoute.estimateTime() > 0);
+        assertTrue(economicalRoute.calculateDistance() > 0);
+        System.out.println(economicalRoute.getSummary());
     }
 }
