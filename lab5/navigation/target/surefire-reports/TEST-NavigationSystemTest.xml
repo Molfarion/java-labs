@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="RouteStrategyTest" time="0.061" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="NavigationSystemTest" time="1.878" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -59,16 +59,25 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testShortestRoute" classname="RouteStrategyTest" time="0.036">
-    <system-out><![CDATA[Shortest Route: 47,68 km, Estimated Time: 0,95 hours
+  <testcase name="testCarNavigationWithDifferentRoutes" classname="NavigationSystemTest" time="1.861">
+    <system-out><![CDATA[Car Navigation:
+]]></system-out>
+    <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\Admin\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.6\byte-buddy-agent-1.14.6.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
+  <testcase name="testCarNavigation" classname="NavigationSystemTest" time="0.003">
+    <system-out><![CDATA[Car Navigation:
 ]]></system-out>
   </testcase>
-  <testcase name="testEconomicalRoute" classname="RouteStrategyTest" time="0.003">
-    <system-out><![CDATA[Economical Route: 43,22 km, Estimated Time: 0,72 hours, Fuel Cost: 3,24
+  <testcase name="testBikeNavigation" classname="NavigationSystemTest" time="0.003">
+    <system-out><![CDATA[Bike Navigation:
 ]]></system-out>
   </testcase>
-  <testcase name="testFastestRoute" classname="RouteStrategyTest" time="0.011">
-    <system-out><![CDATA[Fastest Route: 195,31 km, Estimated Time: 2,44 hours
+  <testcase name="testBikeNavigationWithDifferentMap" classname="NavigationSystemTest" time="0.005">
+    <system-out><![CDATA[Bike Navigation:
 ]]></system-out>
   </testcase>
 </testsuite>
